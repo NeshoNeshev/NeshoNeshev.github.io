@@ -40,16 +40,21 @@
         <div class="loader">Loading...</div>
       </div>
       <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="boxL">
+          <select id="country_select" onchange="loadsLanguage(this.value);">
+          </select> 
+        </div>
         <div class="container">
           <div class="navbar-header">
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html">Nesho</a>
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="index.html#about">About me</a></li>
-              <li><a href="index.html#works">Works</a></li>
-              <li><a href="index.html#contact">Contact</a></li>
+              <li><a href="index.html" id="lang-home">Home</a></li>
+              <li><a href="index.html#about" id="lang-about">About me</a></li>
+              <li><a href="index.html#works" id="lang-works">Works</a></li>
+              <li><a href="index.html#contact" id="lang-contact">Contact</a></li>
+              <li><a class="section-scroll" href="https://www.SmarterASP.NET/index?r=nesho1978" id="lang-webHost">Hosting</a></li>
             </ul>
           </div>
         </div>
@@ -59,7 +64,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">My Portfolio</h2>
+                <h2 class="module-title font-alt" id="lang-portfolio">My Portfolio</h2>
                 
               </div>
             </div>
@@ -71,14 +76,16 @@
               <div class="col-sm-6 col-md-8 col-lg-8"><img src="assets/images/Judo.jpg" alt="Title of Image"/></div>
               <div class="col-sm-6 col-md-4 col-lg-4">
                 <div class="work-details">
-                  <h5 class="work-details-title font-alt">Project Details</h5>
-                  <p>The site is entirely presented at Judo and Sambo Sports Club. Programmed is entirely on HTML and CSS.</p>
+                  <h5 class="work-details-title font-alt" id="lang-projectDetails">Project Details</h5>
+                  <p id="lang-judoBurgas">The site is made for Judo and Sambo Sports Club. Programmed is entirely on HTML and CSS.</p>
                   <ul>
-                    <li><strong>Client: </strong><span class="font-serif">Sports club Judo and Sambo Burgas/Bulgaria</span>
+                    <li><strong id="lang-techology">Technologies: </strong><span class="font-serif">WordPress</span>
                     </li>
-                    <li><strong>Date: </strong><span class="font-serif">23 October, 2020</span>
+                    <li><strong id="lang-client">Client: </strong><span class="font-serif">Sports club Judo and Sambo Burgas/Bulgaria</span>
                     </li>
-                    <li><strong>Online: </strong><span class="font-serif"><a href="https://judoburgas.eu" target="_blank">www.judoburgas.eu</a></span>
+                    <li><strong id="lang-date">Date: </strong><span class="font-serif">23 October, 2020</span>
+                    </li>
+                    <li><strong id="lang-online">Online: </strong><span class="font-serif"><a href="https://judoburgas.eu" target="_blank">www.judoburgas.eu</a></span>
                     </li>
                   </ul>
                 </div>
@@ -88,14 +95,16 @@
             <div class="row mt-20">
               <div class="col-sm-6 col-md-4 col-lg-4">
                 <div class="work-details">
-                  <h5 class="work-details-title font-alt">Project Details</h5>
-                  <p>The site is programmed on ASP.NET Core MVC technology.</p>
+                  <h5 class="work-details-title font-alt" id="lang-projectDetails">Project Details</h5>
+                  <p id="lang-fabulas">The site is programmed on ASP.NET Core MVC technology.</p>
                   <ul>
-                    <li><strong>Client: </strong><span class="font-serif">FabulasGift Burgas/Bulgaria</span>
+                    <li><strong  id="lang-techology">Technologies: </strong><span class="font-serif">ASP.NET Core MVC</span>
                     </li>
-                    <li><strong>Date: </strong><span class="font-serif">Comming soon</span>
+                    <li><strong id="lang-client">Client: </strong><span class="font-serif">FabulasGift Burgas/Bulgaria</span>
                     </li>
-                    <li><strong>Online: </strong><span class="font-serif">www.fabulasgift.eu</span>
+                    <li><strong id="lang-date">Date: </strong><span class="font-serif">Comming soon</span>
+                    </li>
+                    <li><strong id="lang-online">Online: </strong><span class="font-serif">www.fabulasgift.eu</span>
                     </li>
                   </ul>
                 </div>
@@ -108,16 +117,16 @@
               <div class="col-sm-6 col-md-8 col-lg-8"><img src="assets/images/portfolio.jpg" alt="Title of Image"/></div>
               <div class="col-sm-6 col-md-4 col-lg-4">
                 <div class="work-details">
-                  <h5 class="work-details-title font-alt">Project Details</h5>
-                  <p>The project is develop on ASP.NET-Core implemented Factory Patern who reads JSON files and feeds them on UI, Implemented Sendgrid Email Sender and Google Recaptcha.</p>
+                  <h5 class="work-details-title font-alt" id="lang-projectDetails">Project Details</h5>
+                  <p id="lang-razorProject">The project is develop on ASP.NET-Core implemented Factory Patern who reads JSON files and feeds them on UI, Implemented Sendgrid Email Sender and Google Recaptcha.</p>
                   <ul>
-                    <li><strong>Technologies: </strong><span class="font-serif">ASP.NET Core, Razor pages</span>
+                    <li><strong  id="lang-techology">Technologies: </strong><span class="font-serif">ASP.NET Core, Razor pages</span>
                     </li>
                     <li><strong>License: </strong><span class="font-serif">MIT</span>
                     </li>
-                    <li><strong>Date: </strong><span class="font-serif">12 Juny, 2021</span>
+                    <li><strong id="lang-date">Date: </strong><span class="font-serif">12 Juny, 2021</span>
                     </li>
-                    <li><strong>Source Code: </strong><span class="font-serif"><a href="https://github.com/NeshoNeshev/ASP.NET-Core-WebApplication-3.1-Simple-Portfolio-Template" target="_blank">ASP.NET-Core Portfolio</a></span>
+                    <li><strong id="lang-source">Source Code: </strong><span class="font-serif"><a href="https://github.com/NeshoNeshev/ASP.NET-Core-WebApplication-3.1-Simple-Portfolio-Template" target="_blank">ASP.NET-Core Portfolio</a></span>
                     </li>
                   </ul>
                 </div>
@@ -127,34 +136,34 @@
             <div class="row mt-20">
               <div class="col-sm-6 col-md-4 col-lg-4">
                 <div class="work-details">
-                  <h5 class="work-details-title font-alt">Project Details</h5>
-                  <p>This project is develop on the Blazor on client ASP Host, the API client is implemented which accepts a model via Apiresponse class. Cloudinary Image Provider as well as Sendgrid EmailSender, Automapper and Jwt Token.</p>
+                  <h5 class="work-details-title font-alt" id="lang-projectDetails">Project Details</h5>
+                  <p id="lang-blazorProject">This project is develop on the Blazor on client ASP Host, the API client is implemented which accepts a model via Apiresponse class. Cloudinary Image Provider as well as Sendgrid EmailSender, Automapper and Jwt Token.</p>
                   <ul>
-                    <li><strong>Technologies : </strong><span class="font-serif">ASP.NET Core, Blazor on server, Blazor on Client, Entity Framework Code First, Repository Pattern.</span>
+                    <li><strong id="lang-techology">Technologies : </strong><span class="font-serif">ASP.NET Core, Blazor on server, Blazor on Client, Entity Framework Code First, Repository Pattern.</span>
                     </li>
-                    <li><strong>Date: </strong><span class="font-serif">11 September, 2021</span>
+                    <li><strong id="lang-date">Date: </strong><span class="font-serif">11 September, 2021</span>
                     </li>
-                    <li><strong>Source Code: </strong><span class="font-serif"><a href="https://github.com/NeshoNeshev/BlazorTemplate" target="_blank">Blazor Template</a></span>
+                    <li><strong id="lang-source">Source Code: </strong><span class="font-serif"><a href="https://github.com/NeshoNeshev/BlazorTemplate" target="_blank">Blazor Template</a></span>
                     </li>
                   </ul>
                 </div>
               </div>
               <div class="col-sm-6 col-md-8 col-lg-8"><img src="assets/images/3.jpg" alt="Title of Image"/></div>
-          </div>        
+          </div>          
         </section>
         <div class="module-small bg-dark">
           <div class="container">
             <div class="row">
               <div class="col-sm-4">
                 <div class="widget">
-                  <h5 class="widget-title font-alt" >Have a Questions?</h5>
+                  <h5 class="widget-title font-alt" id="lang-questions">Have a Questions?</h5>
                   <p>Phone: <a href="tel:+359 888 72 46 40">+359 888 724 640</a></p>
                   <p>Email: <a href="mailto: neshev1978@gmail.com">neshev1978@gmail.com</a></p>
                 </div>
               </div>
               <div class="col-sm-4">
                 <div class="widget">
-                  <h5 class="widget-title font-alt">Latest Projects</h5>
+                  <h5 class="widget-title font-alt" id="lang-latest">Latest Projects</h5>
                   <ul class="icon-list">
                     <li>Tempalete<a href="https://github.com/NeshoNeshev/BlazorTemplate" target="blank">Blazor Template</a></li>              
                     <li>Fabulous Gifts<a href="#">Fabulas gifts</a></li>
@@ -165,7 +174,7 @@
               </div>
               <div class="col-sm-4">
                 <div class="widget">
-                  <h5 class="widget-title font-alt">Folow Me</h5>
+                  <h5 class="widget-title font-alt" id="lang-folow">Folow Me</h5>
                   <ul class="icon-list">
                     <li><a href="https://github.com/NeshoNeshev" target="blank">Github</a></li>
                     <li><a href="https://bg.linkedin.com/in/nesho-neshev-a86118200" target="blank">Linkedin</a></li>
@@ -200,6 +209,8 @@
     JavaScripts
     =============================================
     -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="assets/js/translate.js"></script>
     <script>
       n =  new Date();
  y = n.getFullYear();
