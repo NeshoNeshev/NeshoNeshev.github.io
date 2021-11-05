@@ -34,7 +34,6 @@
     <link href="assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
     <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
     <link href="assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
-    <link href="popup.css" rel="stylesheet">
     <!-- Main stylesheet and color file-->
     <link href="assets/css/style.css" rel="stylesheet">
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
@@ -45,34 +44,46 @@
         <div class="loader">Loading...</div>
       </div>
       <nav class="navbar navbar-custom navbar-transparent navbar-fixed-top one-page" role="navigation">
+        <div class="boxL">
+          <select id="country_select" onchange="loadsLanguage(this.value);">
+          </select> 
+        </div>
         <div class="container">
+          
           <div class="navbar-header">
+            
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span><span class="icon-bar"></span>
               <span class="icon-bar"></span>
-            </button><a class="navbar-brand" href="index.html">Nesho</a>
-            
+            </button>
+            <a class="navbar-brand" href="index.html">Nesho</a>
+           
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#totop">Home</a></li>
-              <li><a class="section-scroll" href="#about">About me</a></li>
-              <li><a class="section-scroll" href="#works">Works</a></li>
-              <li><a class="section-scroll" href="portfolio.html">Portfolio</a></li>
-              <li><a class="section-scroll" href="#contact">Contact</a></li>
+              <li><a href="#totop" id="lang-home">Home</a></li>
+              <li><a class="section-scroll" href="#about" id="lang-about">About me</a></li>
+              <li><a class="section-scroll" href="#works" id="lang-works">Works</a></li>
+              <li><a class="section-scroll" href="portfolio.html" id="lang-portfolio">Portfolio</a></li>
+              <li><a class="section-scroll" href="#contact" id="lang-contact">Contact</a></li>
+              <li><a class="section-scroll" href="https://www.SmarterASP.NET/index?r=nesho1978" id="lang-webHost">Hosting</a></li>
+                <!-- <select id="country_select" onchange="loadsLanguage(this.value);"></select> -->
+               
+              
             </ul>
           </div>
         </div>
       </nav>
       <section class="home-section home-full-height bg-dark bg-gradient" id="home" data-background="assets/images/2.jpg">
+      
         <div class="titan-caption">
           <div class="caption-content">
-            <div class="font-alt mb-30 titan-title-size-1" id="typed"><h2>Hello &amp; welcome</h2></div>
-            <div class="font-alt mb-40 titan-title-size-4"id="typed"><h2>I`m Nesho Neshev</h2></div>
+            <div class="font-alt mb-30 titan-title-size-1" id="typed"><h2 id="lang-helloAndWelcome">Hello &amp; welcome</h2></div>
+            <div class="font-alt mb-40 titan-title-size-4"id="typed"><h2 id="lang-ImNesho">I`m Nesho Neshev</h2></div>
             <div class="row">
-              <a class="section-scroll btn btn-border-w btn-round" href="#about">Learn More</a>
-              <a class="section-scroll btn btn-border-w btn-round" href="assets/Resume/My Resume.pdf" target="blank">Download CV</a>
+              <a class="section-scroll btn btn-border-w btn-round" href="#about" id="lang-learnMore">Learn More</a>
+              <a class="section-scroll btn btn-border-w btn-round" href="assets/Resume/My Resume.pdf" target="blank" id="lang-downloadCv">Download CV</a>
             </div>
           </div>
         </div>
@@ -81,8 +92,8 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">About Me</h2>
-                <div class="module-subtitle font-serif">Hello, my name is Nesho Neshev. 
+                <h2 class="module-title font-alt" id="lang-about">About Me</h2>
+                <div class="module-subtitle font-serif" id="lang-aboutInfo">Hello, my name is Nesho Neshev. 
                   I am a freelance designer and web developer. I have a passion for detail and I love challenges.
                   I was born in Burgas in October, 1978, and I live in Burgas / Bulgaria.
                   I graduated from @ Software University in Bulgaria, where I discovered that my passion for problem solving and programming in general.
@@ -91,7 +102,7 @@
             </div>
             <div class="row">
               <div class="col-sm-6">
-                <h3 class="font-alt mb-30 text-center">My Courses</h3>
+                <h3 class="font-alt mb-30 text-center" id="lang-courses">My Courses</h3>
                 <hr class="divider-w">
                 <div class="panel-group" id="accordion">
                   <div class="panel panel-default">
@@ -99,7 +110,7 @@
                       <h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#support1">ASP NET CORE</a></h4>
                     </div>
                     <div class="panel-collapse collapse in" id="support1">
-                      <div class="panel-body">In this course I learned Razor Views, Application Flow, Filters & Middleware, Model Binding, Model Validation, Working with Files, Web API, Unit Testing, Mocking, Integration Testing, Selenium, Web Application Designs, Web Application Architectures, Repository Pattern, AutoMapper, WebHost, Logging; Cache, Sessions, GDPR, SignalR, Azure, Deployment & CI and Blazor
+                      <div class="panel-body" id="lang-aspNetCore">In this course I learned Razor Views, Application Flow, Filters & Middleware, Model Binding, Model Validation, Working with Files, Web API, Unit Testing, Mocking, Integration Testing, Selenium, Web Application Designs, Web Application Architectures, Repository Pattern, AutoMapper, WebHost, Logging; Cache, Sessions, GDPR, SignalR, Azure, Deployment & CI and Blazor.
                       </div>
                     </div>
                   </div>
@@ -108,7 +119,7 @@
                       <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2"> C# WEB BASICS</a></h4>
                     </div>
                     <div class="panel-collapse collapse" id="support2">
-                      <div class="panel-body">In this course I learned HTTP Protocol, Asynchronous Processing,State Management Basic MVC, MVC View Engine, MVC Advanced - IoC and Data Binding and create own Web Server
+                      <div class="panel-body" id="lang-webBasic">In this course I learned HTTP Protocol, Asynchronous Processing,State Management Basic MVC, MVC View Engine, MVC Advanced - IoC and Data Binding and create own Web Server.
                       </div>
                     </div>
                   </div>
@@ -117,7 +128,7 @@
                       <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support3"> Algorithm Fundamentals</a></h4>
                     </div>
                     <div class="panel-collapse collapse" id="support3">
-                      <div class="panel-body">In this course I learned Recursion and Backtracking, Searching, Sorting and Greedy algorithms, Graph Theory, Traversal, Shortest Paths and Dynamic Programming.
+                      <div class="panel-body" id="lang-algorithm">In this course I learned Recursion and Backtracking, Searching, Sorting and Greedy algorithms, Graph Theory, Traversal, Shortest Paths and Dynamic Programming.
                       </div>
                     </div>
                   </div>
@@ -126,7 +137,7 @@
                       <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support4">Data Structures Fundamentals (with C#)</a></h4>
                     </div>
                     <div class="panel-collapse collapse" id="support4">
-                      <div class="panel-body">In this course I learned Abstract Data Structures (ADS) and implementations, Algorithmic complexity, Analyzing algorithms complexity, Memory heirarchy, Linear Data Structures, Dynamic Arays, Queues, Stack, Basic Tree structures BFS and DFS traversal, Min and Max Heaps, Binary Search Trees and Balanced Trees.
+                      <div class="panel-body" id="lang-dataStructure">In this course I learned Abstract Data Structures (ADS) and implementations, Algorithmic complexity, Analyzing algorithms complexity, Memory heirarchy, Linear Data Structures, Dynamic Arays, Queues, Stack, Basic Tree structures BFS and DFS traversal, Min and Max Heaps, Binary Search Trees and Balanced Trees.
                       </div>
                     </div>
                   </div>
@@ -135,7 +146,7 @@
                       <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support5">C# OOP</a></h4>
                     </div>
                     <div class="panel-collapse collapse" id="support5">
-                      <div class="panel-body">This course gave me in-depth knowledge of the four principles of object-oriented programming encapsulation, abstraction, inheritance, and polymorphism and SOLID principies.
+                      <div class="panel-body" id="lang-oop">This course gave me in-depth knowledge of the four principles of object-oriented programming encapsulation, abstraction, inheritance, and polymorphism and SOLID principies.
                       </div>
                     </div>
                   </div>
@@ -144,7 +155,7 @@
                       <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support6">EF Core</a></h4>
                     </div>
                     <div class="panel-collapse collapse" id="support6">
-                      <div class="panel-body">In this course I learned relational databases as well as working with ADO.NET, Entity Framework Core, LINQ, Data Transfer Objects, AutoMapper, JSON and XML.
+                      <div class="panel-body" id="lang-efCore">In this course I learned relational databases as well as working with ADO.NET, Entity Framework Core, LINQ, Data Transfer Objects, AutoMapper, JSON and XML.
                       </div>
                     </div>
                   </div>
@@ -153,7 +164,7 @@
                       <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support7">MS SQL</a></h4>
                     </div>
                     <div class="panel-collapse collapse" id="support7">
-                      <div class="panel-body">In this course I gained in-depth knowledge of relational database, CRUD oparations, Functions, Stored Procedures, Transactions and Triggers.
+                      <div class="panel-body" id="lang-msSql">In this course I gained in-depth knowledge of relational database, CRUD oparations, Functions, Stored Procedures, Transactions and Triggers.
                       </div>
                     </div>
                   </div>
@@ -162,7 +173,7 @@
                       <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support8">Fundamentals in Mathematics</a></h4>
                     </div>
                     <div class="panel-collapse collapse" id="support8">
-                      <div class="panel-body text-dark">In this course I learned Numeral Systems, Coordinate System, Mathematical Induction, Graph Theory, Logics and Logical Operators, Boolean Algebra, Probability, Statistics, Combinatorics, Logarithmus, Logarithmus Funcitons, Complex Numbers and Exponential Growth and Decay. 
+                      <div class="panel-body text-dark" id="lang-fundMathematics">In this course I learned Numeral Systems, Coordinate System, Mathematical Induction, Graph Theory, Logics and Logical Operators, Boolean Algebra, Probability, Statistics, Combinatorics, Logarithmus, Logarithmus Funcitons, Complex Numbers and Exponential Growth and Decay. 
                       </div>
                     </div>
                   </div>
@@ -171,14 +182,14 @@
                       <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support9"> C# API Scenarios</a></h4>
                     </div>
                     <div class="panel-collapse collapse" id="support9">
-                      <div class="panel-body">In this course I learned Soap, Rest, OData, GraphQL, API Types, General Advice for API Design, API Styles Comparison.
+                      <div class="panel-body" id="lang-apiScenarios">In this course I learned Soap, Rest, OData, GraphQL, API Types, General Advice for API Design, API Styles Comparison.
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-sm-6">
-                <h3 class="font-alt mb-30 text-center">My skills</h3>
+                <h3 class="font-alt mb-30 text-center" id="lang-mySkills">My skills</h3>
                 <hr class="divider-w">
                 <h6 class="font-alt"><span class="icon-laptop"></span> C#
                 </h6>
@@ -233,9 +244,9 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-offset-3 text-center">
-              <h4 class="font-alt mb-20">Let's work together</h4>
-              <a class="btn btn-border-w" href="https://github.com/NeshoNeshev" target="blank">My Github</a>
-              <a class="btn btn-border-w" href="https://bg.linkedin.com/in/nesho-neshev-a86118200" target="blank">My Linkedin</a>
+              <h4 class="font-alt mb-20" id="lang-letsWork">Let's work together</h4>
+              <a class="btn btn-border-w" href="https://github.com/NeshoNeshev" target="blank" id="lang-github">My Github</a>
+              <a class="btn btn-border-w" href="https://bg.linkedin.com/in/nesho-neshev-a86118200" target="blank" id="lang-linkedin">My Linkedin</a>
             </div>
           </div>
         </div>
@@ -244,7 +255,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-              <h2 class="module-title font-alt">My Works</h2>
+              <h2 class="module-title font-alt" id="lang-myWork">My Works</h2>
               <div class="module-subtitle font-serif"></div>
             </div>
           </div>
@@ -252,9 +263,9 @@
           <div class="row">
             <div class="col-sm-12">
               <ul class="filter font-alt" id="filters">
-                <li><a class="current wow fadeInUp" href="#" data-filter="*">All</a></li>
-                <li><a class="wow fadeInUp" href="#" data-filter=".webdesign" data-wow-delay="0.6s">Web Design</a></li>
-                <li><a class="wow fadeInUp" href="#" data-filter=".githubprojects" data-wow-delay="0.6s">Projects</a></li>
+                <li><a class="current wow fadeInUp" href="#" data-filter="*" id="lang-all">All</a></li>
+                <li><a class="wow fadeInUp" href="#" data-filter=".webdesign" data-wow-delay="0.6s" id="lang-webDesign">Web Design</a></li>
+                <li><a class="wow fadeInUp" href="#" data-filter=".githubprojects" data-wow-delay="0.6s" id="lang-projects">Projects</a></li>
               </ul>
             </div>
           </div>
@@ -294,12 +305,12 @@
           <div class="row">
             <div class="col-sm-6 col-md-8 col-lg-6 col-lg-offset-2">
               <div class="callout-text font-alt">
-                <h3 class="callout-title">Want to see more works?</h3>
-                <p>I am always open to interesting projects.</p>
+                <h3 class="callout-title" id="lang-seeWorks">Want to see more works?</h3>
+                <p id="lang-interestedProjects">I am always open to interesting projects.</p>
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-2">
-              <div class="callout-btn-box"><a class="btn btn-w btn-round" href="portfolio.html">Lets view portfolio</a></div>
+              <div class="callout-btn-box"><a class="btn btn-w btn-round" href="portfolio.html" id="lang-myPortfolio">Lets view my portfolio</a></div>
             </div>
           </div>
         </div>
@@ -308,7 +319,7 @@
       <section class="module" id="contact">
           <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-              <h2 class="module-title font-alt">Contact Me</h2>
+              <h2 class="module-title font-alt" id="lang-contactMe">Contact Me</h2>
               <div class="module-subtitle font-serif"></div>
             </div>
           </div>
@@ -333,7 +344,7 @@
                   </span>
                   </h6>
                   <hr/>
-                  <h6 class="font-alt"><span class="icon-map"> 11 Street. Georgi Kirkov, Burgas, Bulgaria
+                  <h6 class="font-alt"><span class="icon-map" id="lang-adress"> 11 Street. Georgi Kirkov, Burgas, Bulgaria
                   </span>
                   </h6>
                   <hr/>
@@ -347,39 +358,39 @@
             </div>
       </section>
       <div class="module-small bg-dark">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="widget">
-                  <h5 class="widget-title font-alt" >Have a Questions?</h5>
-                  <p>Phone: <a href="tel:+359 888 72 46 40">+359 888 724 640</a></p>
-                  <p>Email: <a href="mailto: neshev1978@gmail.com">neshev1978@gmail.com</a></p>
-                </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="widget">
+                <h5 class="widget-title font-alt" id="lang-questions">Have a Questions?</h5>
+                <p>Phone: <a href="tel:+359 888 72 46 40">+359 888 724 640</a></p>
+                <p>Email: <a href="mailto: neshev1978@gmail.com">neshev1978@gmail.com</a></p>
               </div>
-              <div class="col-sm-4">
-                <div class="widget">
-                  <h5 class="widget-title font-alt">Latest Projects</h5>
-                  <ul class="icon-list">
-                    <li>Tempalete<a href="https://github.com/NeshoNeshev/BlazorTemplate" target="blank">Blazor Template</a></li>              
-                    <li>Fabulous Gifts<a href="#">Fabulas gifts</a></li>
-                    <li>Judo Burgas<a href="https://judoburgas.eu" target="blank">judoburgas.eu</a></li>
-                    <li>Template<a href="https://github.com/NeshoNeshev/ASP.NET-Core-WebApplication-3.1-Simple-Portfolio-Template" target="blank">ASP.NET Core Portfolio Template</a></li>                 
-                  </ul>
-                </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="widget">
+                <h5 class="widget-title font-alt" id="lang-latest">Latest Projects</h5>
+                <ul class="icon-list">
+                  <li>Tempalete<a href="https://github.com/NeshoNeshev/BlazorTemplate" target="blank">Blazor Template</a></li>              
+                  <li>Fabulous Gifts<a href="#">Fabulas gifts</a></li>
+                  <li>Judo Burgas<a href="https://judoburgas.eu" target="blank">judoburgas.eu</a></li>
+                  <li>Template<a href="https://github.com/NeshoNeshev/ASP.NET-Core-WebApplication-3.1-Simple-Portfolio-Template" target="blank">ASP.NET Core Portfolio Template</a></li>                 
+                </ul>
               </div>
-              <div class="col-sm-4">
-                <div class="widget">
-                  <h5 class="widget-title font-alt">Folow Me</h5>
-                  <ul class="icon-list">
-                    <li><a href="https://github.com/NeshoNeshev" target="blank">Github</a></li>
-                    <li><a href="https://bg.linkedin.com/in/nesho-neshev-a86118200" target="blank">Linkedin</a></li>
-                    <li><a href="https://m.facebook.com/profile.php?id=100000613655380" target="blank">Facebook</a></li>
-                  </ul>
-                </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="widget">
+                <h5 class="widget-title font-alt" id="lang-folow">Folow Me</h5>
+                <ul class="icon-list">
+                  <li><a href="https://github.com/NeshoNeshev" target="blank">Github</a></li>
+                  <li><a href="https://bg.linkedin.com/in/nesho-neshev-a86118200" target="blank">Linkedin</a></li>
+                  <li><a href="https://m.facebook.com/profile.php?id=100000613655380" target="blank">Facebook</a></li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
+      </div>
         <hr class="divider-d">
         <footer class="footer bg-dark" >
           <div class="container">
@@ -404,7 +415,8 @@
     JavaScripts
     =============================================
     -->
-    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="assets/js/translate.js"></script>
    <script>
      n =  new Date();
 y = n.getFullYear();
@@ -417,7 +429,6 @@ document.getElementById("date").innerHTML = y;
     <script src="assets/lib/isotope/dist/isotope.pkgd.js"></script>
     <script src="assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
     <script src="assets/lib/flexslider/jquery.flexslider.js"></script>
-    <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
     <script src="assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
     <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
     <script src="assets/js/plugins.js"></script>
