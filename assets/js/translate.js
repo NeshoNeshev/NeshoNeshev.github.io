@@ -77,7 +77,7 @@ var LanguageList = {
     "latest": "Последни проекти",
     "questions": "Имате Въпроси?",
     "helloAndWelcome": "Здравейте,",
-    "ImNesho" : "Аз съм Нешо Нешев,",
+    "ImNesho" : "Аз съм Нешо Нешев",
     "learnMore": "За мен",
     "downloadCv":"Моето Cv",
     "about":"За Мен",
