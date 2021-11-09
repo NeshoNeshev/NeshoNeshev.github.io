@@ -1,6 +1,6 @@
 var LanguageList = {
     "EN" : "English",
-    "BG" : "Bulgarian",
+    "BG" : "Български",
   };
   
   //languages Objects
